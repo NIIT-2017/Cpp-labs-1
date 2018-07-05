@@ -1,0 +1,6 @@
+#!/bin/bash
+TARGET=main2
+make
+echo -e "\n-----Start program-----\n"
+./${TARGET}
+echo -e "\n-----End program-----\n"
