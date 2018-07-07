@@ -1,5 +1,0 @@
-#!/bin/bash
-##example of use: ./cr 3 task2.h, task2.cpp, task3.h, task3.cpp, main3.cpp
-name=$1
-shift
-./create cpp-lab-1-$name $@
