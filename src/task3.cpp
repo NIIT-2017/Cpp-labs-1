@@ -1,6 +1,6 @@
 #include "task2.h"
-#include <iostream>
-using namespace std;
+//#include <iostream>
+//using namespace std;
 /*
 bool checkPrime(unsigned int value)  //проверка числа на простоту
 {
@@ -31,7 +31,7 @@ unsigned long long sumPrime(unsigned int hbound)  //сумма всех простых чисел до 
 	for (unsigned int i = 2; i < hbound; i++)
 	{
 		if (checkPrime(i))  //проверка числа на простоту
-			cout << i << endl;
+			//cout << i << endl;
 			sumPrimeNumbers += i;
 	}
 	return sumPrimeNumbers;
