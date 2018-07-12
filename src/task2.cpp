@@ -21,7 +21,7 @@ bool checkPrime(unsigned int value)  //проверка числа на простоту
 
 
 
-unsigned int nPrime(unsigned n)  //нахождение n-ого простого числа (в ряду)
+unsigned long long nPrime(unsigned n)  //нахождение n-ого простого числа (в ряду)
 {
 	int count = 0;
 	int findPrime = 1;
@@ -35,7 +35,7 @@ unsigned int nPrime(unsigned n)  //нахождение n-ого простого числа (в ряду)
 }
 
 
-unsigned int nextPrime(unsigned int value)  //нахождение ближайшего следующего простого числа к value
+unsigned long long nextPrime(unsigned long long value)  //нахождение ближайшего следующего простого числа к value
 {
 	int count = 0;
 	int nextPrime = value + 1;
