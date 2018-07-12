@@ -7,5 +7,6 @@ using namespace std;
 
 int main()
 {
-	cout << "The sum of all prime numbers, less than two million = " << sumPrime(100) << endl;
+	//cout << "The sum of all prime numbers, less than two million = " << sumPrime(100) << endl;
+	cout << "The sum of all prime numbers, less than two million = " << sumPrime(2000000) << endl;
 }
