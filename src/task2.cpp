@@ -4,18 +4,14 @@ bool checkPrime(unsigned int value)  //проверка числа на простоту
 		return true;
 	else
 	{
-		bool isPrime = false;
-		double remainder = 0;
-		for (unsigned int i = 2; i < value;)
+		int remainder = 0;
+		for (unsigned int i = 2; i < value; i++)
 		{
 			remainder = (value % i);
-			if (remainder != 0)
-				i++;
-			else
-				return isPrime;
+			if (remainder == 0)
+				return false;
 		}
-		isPrime = true;
-		return isPrime;
+		return true;
 	}
 }
 
