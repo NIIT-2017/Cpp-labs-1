@@ -29,7 +29,7 @@ static unsigned int length(char* value)
 	return counter;
 }
 
-char* big_plus(char *x, char *y)
+char* sum(char *x, char *y)
 {
 	if (isNumber(x) && isNumber(y))
 	{
