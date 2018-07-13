@@ -1,5 +1,5 @@
-#ifndef TASK1
-#define TASK1
+#ifndef TASK4
+#define TASK4
 
 char* sum(char *x, char *y);
 
