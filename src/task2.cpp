@@ -32,7 +32,7 @@ unsigned int nPrime(unsigned n)
 	return searchPrime(2, n);
 }
 
-unsigned int nextPrime(unsigned int value)
+unsigned long long nextPrime(unsigned long long value)
 {
 	return searchPrime(value + 1, 1);
 }
