@@ -1,3 +1,6 @@
+#include <math.h>
+
+/*
 bool checkPrime(unsigned int value)  //проверка числа на простоту
 {
 	if (value == 2)
@@ -11,6 +14,28 @@ bool checkPrime(unsigned int value)  //проверка числа на простоту
 			if (remainder == 0)
 				return false;
 		}
+		return true;
+	}
+}
+*/
+
+bool checkPrime(unsigned int value)  //проверка числа на простоту
+{
+	if (value == 2)
+		return true;
+	else
+	{
+		//bool isPrime = false;
+		//double remainder = 0;
+		for (unsigned int i = 2; i <= sqrt(double(value)); i++)
+		{
+			//remainder = (value % i);
+			if ((value % i) == 0)
+				//return isPrime;
+				return false;
+		}
+		//isPrime = true;
+		//return isPrime;
 		return true;
 	}
 }

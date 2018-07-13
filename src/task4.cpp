@@ -9,12 +9,12 @@
 //char * y       = "51498";
 //                  53435
 
-unsigned long maxStrLen(char * x, char * y)  // для нахождения максимальной длины строки, состоящей только из цифровых значений
+unsigned long long maxStrLen(char * x, char * y)  // для нахождения максимальной длины строки, состоящей только из цифровых значений
 {
-	unsigned long lenStr1 = strlen(x);
-	unsigned long lenStr2 = strlen(y);
-	unsigned long count1 = 0; // длина строки с первым числом
-	unsigned long count2 = 0; // длина строки со вторым числом
+	unsigned long long lenStr1 = strlen(x);
+	unsigned long long lenStr2 = strlen(y);
+	unsigned long long count1 = 0; // длина строки с первым числом
+	unsigned long long count2 = 0; // длина строки со вторым числом
 	//cout << lenStr1 << " " << lenStr2 << endl << endl;
 	for (int m = 0; m < lenStr1; m++)
 	if (isdigit(x[m]))
@@ -31,9 +31,9 @@ unsigned long maxStrLen(char * x, char * y)  // для нахождения максимальной длин
 
 char * sum(char * x, char * y)
 {
-	unsigned long lenStr1 = strlen(x);
-	unsigned long lenStr2 = strlen(y);
-	unsigned long lenSumStr = maxStrLen(x, y); // длина итоговой строки
+	unsigned long long lenStr1 = strlen(x);
+	unsigned long long lenStr2 = strlen(y);
+	unsigned long long lenSumStr = maxStrLen(x, y); // длина итоговой строки
 	
 	//cout << lenSumStr << endl << endl;
 
@@ -53,60 +53,63 @@ char * sum(char * x, char * y)
 	int j = (lenStr2 - 1);
 	while (i >= 0 && j >= 0)
 	{
-		while (!isdigit(x[i]) && (i >= 0))
-			i--;
-		if (i >= 0)
-			digit1 = x[i] - '0';
-		else
-			digit1 = 0;
 
-		while (!isdigit(y[j]) && (j >= 0))
-			j--;
-		if (j >=0 )
+		//if (isdigit(x[i]))
+			digit1 = x[i] - '0';
+		//else
+		//	digit1 = x[i];
+
+
+		//if (isdigit(y[j]))
 			digit2 = y[j] - '0';
-		else
-			digit2 = 0;
+		//else
+		//	digit2 = y[j];
 
 		//cout << digit1;
 		//cout << endl;
 		//cout << digit2;
 		//cout << endl;
 
-		
-		units = (digit1 + digit2) % 10 + memorize; // остаток записать + то, что запомнили из прошлого разряда
-		if (units <= 9)
+		if (isdigit(x[i]) || isdigit(y[j]))
 		{
-			sumStr[k] = units + '0';
-			//cout << sumStr[k] << endl;
-			memorize = (digit1 + digit2) / 10;  // запомнить целую часть от деления для переноса в другой разряд
-			//cout << memorize;
-			//cout << endl << endl;
-		}
-		else
-		{
-			sumStr[k] = '0';
-			//cout << sumStr[k] << endl;
-			memorize = 1;  // запомнить целую часть от деления для переноса в другой разряд
-			//cout << memorize;
-			//cout << endl << endl;
-		}
-		k--;
-		i--;
-		j--;
-	}
-
-	if (i >= 0)
-	{
-		while (i >= 0)
-		{
-			while (!isdigit(x[i]) && (i >= 0))
-				i--;
-			if (i < 0)
+			units = (digit1 + digit2) % 10 + memorize; // остаток записать + то, что запомнили из прошлого разряда
+			if (units <= 9)
 			{
-				sumStr[k] = memorize + '0';
+				sumStr[k] = units + '0';
+				//cout << sumStr[k] << endl;
+				memorize = (digit1 + digit2) / 10;  // запомнить целую часть от деления для переноса в другой разряд
+				//cout << memorize;
+				//cout << endl << endl;
 			}
 			else
 			{
+				sumStr[k] = '0';
+				//cout << sumStr[k] << endl;
+				memorize = 1;  // запомнить целую часть от деления для переноса в другой разряд
+				//cout << memorize;
+				//cout << endl << endl;
+			}
+			k--;
+			i--;
+			j--;
+		}
+		else
+		{
+			sumStr[k] = (digit2 - digit1 + digit2) + '0';
+			k--;
+			i--;
+			j--;
+		}
+
+	}
+
+	if (isdigit(x[i]) || isdigit(y[j]))
+	{
+		if (i >= 0)
+		{
+			while (i >= 0)
+			{
+
 				units = (x[i] - '0') + memorize; // остаток записать + то, что запомнили из прошлого разряда
 				if (units <= 9)
 				{
@@ -127,43 +130,30 @@ char * sum(char * x, char * y)
 				k--;
 			}
 		}
-	}
 
-	if (j >= 0)
-	{
-		while (j >= 0)
+
+		if (j >= 0)
 		{
-			while (!isdigit(y[j]) && (j >= 0))
-				j--;
-			if (j < 0)
+			while (j >= 0)
 			{
-				sumStr[k] = memorize + '0';
+
+
+				sumStr[k] = '0';
+				//cout << sumStr[k] << endl;
+				memorize = 1;  // запомнить целую часть от деления для переноса в другой разряд
+				//cout << memorize;
+				//cout << endl << endl;
 			}
-			else
-			{
-				units = (y[j] - '0') + memorize; // остаток записать + то, что запомнили из прошлого разряда
-				if (units <= 9)
-				{
-					sumStr[k] = units + '0';
-					//cout << sumStr[k] << endl;
-					//cout << endl << endl;
-				}
-				else
-				{
-					sumStr[k] = '0';
-					//cout << sumStr[k] << endl;
-					memorize = 1;  // запомнить целую часть от деления для переноса в другой разряд
-					//cout << memorize;
-					//cout << endl << endl;
-				}
-				j--;
-				k--;
-			}
+			j--;
+			k--;
 		}
+
+	
+
+		if (memorize > 0) // если после перебора единиц обоих чисел в памяти что-то осталось, выведем это (под это и выделяли доп. разряд при выделении памяти)
+			sumStr[k] = memorize + '0';
 	}
 
-	if (memorize > 0) // если после перебора единиц обоих чисел в памяти что-то осталось, выведем это (под это и выделяли доп. разряд при выделении памяти)
-		sumStr[k] = memorize + '0';
 
 	return sumStr;
 }

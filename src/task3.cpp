@@ -1,6 +1,9 @@
 #include "task2.h"
-//#include <iostream>
-//using namespace std;
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
 /*
 bool checkPrime(unsigned int value)  //проверка числа на простоту
 {
@@ -8,18 +11,18 @@ bool checkPrime(unsigned int value)  //проверка числа на простоту
 		return true;
 	else
 	{
-		bool isPrime = false;
-		double remainder = 0;
-		for (unsigned int i = 2; i < value;)
+		//bool isPrime = false;
+		//double remainder = 0;
+		for (unsigned int i = 2; i <= sqrt(double(value)); i++)
 		{
-			remainder = (value % i);
-			if (remainder != 0)
-				i++;
-			else
-				return isPrime;
+			//remainder = (value % i);
+			if ((value % i) == 0)
+				//return isPrime;
+				return false;
 		}
-		isPrime = true;
-		return isPrime;
+		//isPrime = true;
+		//return isPrime;
+		return true;
 	}
 }
 */
@@ -31,8 +34,10 @@ unsigned long long sumPrime(unsigned int hbound)  //сумма всех простых чисел до 
 	for (unsigned int i = 2; i < hbound; i++)
 	{
 		if (checkPrime(i))  //проверка числа на простоту
+		{   
 			//cout << i << endl;
 			sumPrimeNumbers += i;
+		}
 	}
 	return sumPrimeNumbers;
 }
