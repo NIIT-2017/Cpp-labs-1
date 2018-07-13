@@ -1,5 +1,6 @@
 #include "task5.h"
 #include <iostream>
+#include <cstring>
 /*
 N - количество строк,
 buf входная строка
