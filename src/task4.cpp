@@ -29,7 +29,7 @@ static unsigned int length(char* value)
 	return counter;
 }
 
-char* sum(char *x, char *y)
+static char* big_plus(char *x, char *y)
 {
 	if (isNumber(x) && isNumber(y))
 	{
@@ -75,4 +75,9 @@ char* sum(char *x, char *y)
 	}
 	else
 		return nullptr;
+}
+
+char* sum(char *x, char *y)
+{
+	return big_plus(x, y);
 }
