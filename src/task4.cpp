@@ -169,7 +169,7 @@ char * sum(char * x, char * y)
 		if (memorize > 0) // если после перебора единиц обоих чисел в памяти что-то осталось, выведем это (под это и выделяли доп. разряд при выделении памяти)
 			sumStr[k] = memorize + '0';
 
-		if (sumStr[0] == ' ')
+		if (sumStr[0] == ' ' || sumStr[0] == '0')
 		{
 			for (int r = 0; r <= lenSumStr + 1; r++)
 				sumStr1[r] = sumStr[r + 1];

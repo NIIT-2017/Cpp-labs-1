@@ -7,14 +7,17 @@ int main()
 {
 	using namespace std;
 
-	char * arrStr1 = "1937";
-	char * arrStr2 = "51498";
+	char * arrStr3 = "99999999999999999999";
+	char * arrStr4 = "1";
 
-	char * arrStr3 = "12345rty67h8";
-	char * arrStr4 = "203jh9n";
+	char * arrStr1 = "123456789";
+	char * arrStr2 = "000000001";
 
-	char * arrStr5 = "k999hg99f";
-	char * arrStr6 = "r999nb99k";
+	char * arrStr5 = "xyx";
+	char * arrStr6 = "yxy";
+
+	char * arrStr7 = "ert5674sdd45p333";
+	char * arrStr8 = "vdgf456789";
 
 
 	char * ps;
@@ -29,6 +32,10 @@ int main()
 	delete[] ps;
 
 	ps = sum(arrStr5, arrStr6);
+	cout << ps << endl << endl;
+	delete[] ps;
+
+	ps = sum(arrStr7, arrStr8);
 	cout << ps << endl << endl;
 	delete[] ps;
 
