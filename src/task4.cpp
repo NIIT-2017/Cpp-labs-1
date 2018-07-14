@@ -1,7 +1,5 @@
 #include "task4.h"
 #include <iostream>
-#include <cstring>
-
 
 char * sum(char *x, char *y)
 {
@@ -10,6 +8,7 @@ char * sum(char *x, char *y)
 	int sizey = 0;
 	int temp = 0;
 	char* result = nullptr;
+	char* result2 = nullptr;
 
 	char * ptr = x;
 	while (*ptr != '\0')
@@ -29,11 +28,10 @@ char * sum(char *x, char *y)
 	}
 
 	//приводим к общему виду
-	if (sizex > sizey)
+	if (sizex >= sizey)
 	{
 		len = sizex+1;
 		result = new char[len+1]();
-		result[len] = '\0';
 		memcpy(result + (len - sizey), y, sizey);
 		for (int i = 1; i <len; i++)
 		{
@@ -46,7 +44,6 @@ char * sum(char *x, char *y)
 	{
 		len = sizey + 1;
 		result = new char[len + 1]();
-		result[len] = '\0';
 		memcpy(result + (len - sizex), y, sizex);
 		for (int i = 1; i <len; i++)
 		{
@@ -55,6 +52,12 @@ char * sum(char *x, char *y)
 			result[sizey - i] = temp / 10 + '0';
 		}
 	}
-
+	if (result[0] == '0')
+	{
+		result2 = new char[len]();
+		memcpy(result2, result + 1, len);
+		delete[] result;
+		return result2;
+	}
 	return result;
 }
