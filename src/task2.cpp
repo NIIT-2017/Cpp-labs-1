@@ -34,5 +34,5 @@ unsigned int nPrime(unsigned n)
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	return searchPrime(value + 1, 1);
+	return searchPrime(value, 1);
 }
