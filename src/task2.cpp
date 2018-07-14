@@ -29,7 +29,7 @@ static unsigned int searchPrime(unsigned value, unsigned n)
 
 unsigned int nPrime(unsigned n)
 {
-	return searchPrime(1, n);
+	return searchPrime(2, n);
 }
 
 unsigned long long nextPrime(unsigned long long value)
