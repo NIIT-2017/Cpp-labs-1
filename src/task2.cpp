@@ -3,7 +3,7 @@
 bool checkPrime(unsigned int value)
 {
 	double limit = sqrt(value);
-	for (int i = 2; i < limit; i++)
+	for (int i = 2; i <= limit; i++)
 		if (value % i == 0)
 			return false;
 	return true;
@@ -29,10 +29,10 @@ static unsigned int searchPrime(unsigned value, unsigned n)
 
 unsigned int nPrime(unsigned n)
 {
-	return searchPrime(2, n);
+	return searchPrime(1, n);
 }
 
 unsigned long long nextPrime(unsigned long long value)
 {
-	return searchPrime(value, 1);
+	return searchPrime(value + 1, 1);
 }
