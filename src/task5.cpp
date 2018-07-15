@@ -1,4 +1,71 @@
-static unsigned int length(char* value)
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+void split(char*** result, int* N, char* buf, char ch)
+{
+
+	int count = 1;
+	int token_len = 1;
+	int i = 0;
+	char *p;
+	char *t;
+
+	p = buf;
+	while (*p != '\0')
+	{
+		if (*p == ch)
+			count++;
+		p++;
+	}
+
+	*result = (char**)malloc(sizeof(char*) * count);
+	if (*result == NULL)
+		exit(1);
+
+	p = buf;
+	while (*p != '\0')
+	{
+		if (*p == ch)
+		{
+			(*result)[i] = (char*)malloc(sizeof(char) * token_len);
+			if ((*result)[i] == NULL)
+				exit(1);
+
+			token_len = 0;
+			i++;
+		}
+		p++;
+		token_len++;
+	}
+	(*result)[i] = (char*)malloc(sizeof(char) * token_len);
+	if ((*result)[i] == NULL)
+		exit(1);
+
+	i = 0;
+	p = buf;
+	t = ((*result)[i]);
+	while (*p != '\0')
+	{
+		if (*p != ch && *p != '\0')
+		{
+			*t = *p;
+			t++;
+		}
+		else
+		{
+			*t = '\0';
+			i++;
+			t = ((*result)[i]);
+		}
+		p++;
+	}
+
+	*N = count;
+
+}
+
+/*static unsigned int length(char* value)
 {
 	unsigned int counter = 0;
 	while (*value != '\0')
@@ -32,4 +99,4 @@ void split(char*** result, int* N, char* buf, char ch)
 		}
 		else
 			local_len++;
-}
+}*/
