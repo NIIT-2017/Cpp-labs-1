@@ -19,7 +19,7 @@ void split(char*** result, int* N, char* buf, char ch)
 		p++;
 	}
 
-	*result = (char**)malloc(sizeof(char*) * count);
+	*result = new char*[count];//(char**)malloc(sizeof(char*) * count);
 	if (*result == NULL)
 		exit(1);
 
@@ -28,7 +28,7 @@ void split(char*** result, int* N, char* buf, char ch)
 	{
 		if (*p == ch)
 		{
-			(*result)[i] = (char*)malloc(sizeof(char) * token_len);
+			(*result)[i] = new char[token_len];//(char*)malloc(sizeof(char) * token_len);
 			if ((*result)[i] == NULL)
 				exit(1);
 
@@ -38,7 +38,7 @@ void split(char*** result, int* N, char* buf, char ch)
 		p++;
 		token_len++;
 	}
-	(*result)[i] = (char*)malloc(sizeof(char) * token_len);
+	(*result)[i] = new char[token_len];//(char*)malloc(sizeof(char) * token_len);
 	if ((*result)[i] == NULL)
 		exit(1);
 
