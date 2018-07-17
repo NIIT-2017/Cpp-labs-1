@@ -6,23 +6,6 @@
 
 using namespace std;
 
-// Функция находления наибольшего общего делителя НОД для двух чисел
-// Находим НОД по иттерационному алгоритму Евклида
-unsigned long nod(unsigned long a, unsigned long b)
-{
-	unsigned long tmp;
-	while (a != b)
-	{
-		if (a > b)
-		{
-			tmp = a;
-			a = b;
-			b = tmp;
-		}
-		b = b - a;
-	}
-	return a;
-}
 
 // Проверка числа на простоту
 bool checkPrime(unsigned int value)

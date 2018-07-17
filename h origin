@@ -1,0 +1,147 @@
+[33mcommit 296a8d6fb6525a785142270e73555a65d5432d81[m[33m ([m[1;36mHEAD -> [m[1;32mb12[m[33m)[m
+Author: Orlova <khramova@inbox.ru>
+Date:   Tue Jul 17 16:40:17 2018 +0400
+
+    Добавила файлы. Орлова
+
+[33mcommit c9e001b08b479f62ce809b2e2b22d8463702fd9e[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/b25[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 0d8f0d3 02f79ee
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Thu Jul 12 08:42:03 2018 +0300
+
+    Merge pull request #7 from DmStrelok/master
+    
+    Fixed bugs in tests 4.1 and 4.2
+
+[33mcommit 02f79eebc78425d0be0bae739fda4487e4ea5388[m
+Author: Dmitriy Parev <dmitriyparev@yandex.ru>
+Date:   Thu Jul 12 01:14:24 2018 +0300
+
+    Fixed bugs in tests 4.1 and 4.2
+
+[33mcommit 0d8f0d3df6ffb7a4e658a619e0d8e707383809d4[m
+Author: Anton Shtanyuk <ashtanyuk@gmail.com>
+Date:   Wed Jul 11 11:25:36 2018 +0300
+
+    red->green
+
+[33mcommit e00ff6e47a878ee9febe0e4675debf2f24de9d15[m[33m ([m[1;31morigin/b16[m[33m)[m
+Author: Anton Shtanyuk <ashtanyuk@gmail.com>
+Date:   Wed Jul 11 11:17:59 2018 +0300
+
+    Добавлено описание алгоритма
+
+[33mcommit 54182b7fa8eaa6d32ac6e4fa37307e1dd8dd06e2[m
+Merge: 5de81be 4a8c4ae
+Author: Anton Shtanyuk <ashtanyuk@gmail.com>
+Date:   Wed Jul 11 11:12:34 2018 +0300
+
+    Merge branch 'master' of https://github.com/NIIT-2017/Cpp-lab-1
+
+[33mcommit 5de81beb3e63a22043cb1ab9aaeddc1c0cac79be[m
+Author: Anton Shtanyuk <ashtanyuk@gmail.com>
+Date:   Wed Jul 11 11:12:09 2018 +0300
+
+    Добавлены тесты
+
+[33mcommit 4a8c4ae9b48ee92dda93ab3ee6fe4a863e11d5c5[m
+Merge: 8580f02 0e6debb
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jul 7 16:09:29 2018 +0300
+
+    Merge pull request #4 from ashtanyuk/master
+    
+    Merge pull request #1 from NIIT-2017/master
+
+[33mcommit 8580f02f40cbeec8cd05f6763b35598056858a34[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jul 7 15:13:57 2018 +0300
+
+    Update README.md
+
+[33mcommit 104ca44ed87d6dadbc39b0c3bbd32ce7bc8406a7[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jul 7 15:12:37 2018 +0300
+
+    Update README.md
+
+[33mcommit 0e6debb7ecbe59e5939eb4d6838354662a21f7e9[m
+Merge: 2974cfe 03ace67
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jul 7 09:07:44 2018 +0300
+
+    Merge pull request #1 from NIIT-2017/master
+    
+    Update README.md
+
+[33mcommit 03ace67a61f515f010a77163266abc4005cdc7eb[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jul 7 09:05:16 2018 +0300
+
+    Update README.md
+
+[33mcommit 2974cfe5467b2a80742c9aa4a4c426213578fa70[m
+Author: Anton Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jul 7 08:58:33 2018 +0300
+
+    Готовность N1
+
+[33mcommit a9a6d2a7b393359eb481fbe0cb7167da3b0ba027[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Thu Jul 5 18:14:57 2018 +0300
+
+    Update README.md
+
+[33mcommit f74fa8023d71969a5b5a7d6ca7bbc7d649ae3086[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Thu Jul 5 17:56:46 2018 +0300
+
+    Update README.md
+
+[33mcommit 33a3e9f4e640945df3f180ccadc402d9c2533930[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Thu Jul 5 17:48:10 2018 +0300
+
+    Update README.md
+
+[33mcommit d499488df91f775e5d1565d672b014a904da83df[m
+Author: Anton Shtanyuk <ashtanyuk@gmail.com>
+Date:   Thu Jul 5 17:44:19 2018 +0300
+
+    Добавлен светофор
+
+[33mcommit 2af2132a24606bc334cb069c569cee016fc77876[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sun Jul 1 10:23:26 2018 +0300
+
+    Update README.md
+
+[33mcommit 3a91bbf4bac6e8dd28fd4d64b96e70c120fa12cb[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jun 30 15:00:38 2018 +0300
+
+    Update README.md
+
+[33mcommit 0339017da8b34817ac115f90c83156eb39935509[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jun 30 09:55:46 2018 +0300
+
+    Update README.md
+
+[33mcommit 1640c68c121af2c5da6e0c44c81a705155dc2f8f[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jun 30 09:46:19 2018 +0300
+
+    Update README.md
+
+[33mcommit be83aed9dd0710841ece383f73fc36b5ca864307[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jun 30 09:22:22 2018 +0300
+
+    Update README.md
+
+[33mcommit d17dc641237de2f073a1fdd037ac9e6e13cc9b19[m
+Author: Anton A. Shtanyuk <ashtanyuk@gmail.com>
+Date:   Sat Jun 30 09:11:04 2018 +0300
+
+    Create README.md
