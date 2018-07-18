@@ -1,4 +1,4 @@
-#include "task2.h"
+п»ї#include "task2.h"
 #include <cmath>
 #include <ctime>
 
@@ -7,7 +7,7 @@
 using namespace std;
 
 
-// Проверка числа на простоту
+// РџСЂРѕРІРµСЂРєР° С‡РёСЃР»Р° РЅР° РїСЂРѕСЃС‚РѕС‚Сѓ
 bool checkPrime(unsigned int value)
 {	
 	for (unsigned int i = 2; i <= sqrt(value); i++)
@@ -16,23 +16,23 @@ bool checkPrime(unsigned int value)
 	return true;
 }
 
-// Нахождение n - ого простого числа(в ряду).
+// РќР°С…РѕР¶РґРµРЅРёРµ n - РѕРіРѕ РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р°(РІ СЂСЏРґСѓ).
 unsigned long long nPrime(unsigned int n)
 {
-	// Если n некорректно возвращаем 0
+	// Р•СЃР»Рё n РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ РІРѕР·РІСЂР°С‰Р°РµРј 0
 	if (n < 1)
 		return 0;
 
-	// Первое простое число в ряду - 1
+	// РџРµСЂРІРѕРµ РїСЂРѕСЃС‚РѕРµ С‡РёСЃР»Рѕ РІ СЂСЏРґСѓ - 1
 	unsigned long long result = 1;
 
-	// Методом перебора найдем все простые числа по порядку до n
-	// Первое число мы уже нашли
+	// РњРµС‚РѕРґРѕРј РїРµСЂРµР±РѕСЂР° РЅР°Р№РґРµРј РІСЃРµ РїСЂРѕСЃС‚С‹Рµ С‡РёСЃР»Р° РїРѕ РїРѕСЂСЏРґРєСѓ РґРѕ n
+	// РџРµСЂРІРѕРµ С‡РёСЃР»Рѕ РјС‹ СѓР¶Рµ РЅР°С€Р»Рё
 	for (unsigned int i = 0; i < n; i++)
 	{
-		// Запускаем поиск следующего простого числа
+		// Р—Р°РїСѓСЃРєР°РµРј РїРѕРёСЃРє СЃР»РµРґСѓСЋС‰РµРіРѕ РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р°
 		result = result + 1;
-		// Будем перебирать числа пока не найдем простое
+		// Р‘СѓРґРµРј РїРµСЂРµР±РёСЂР°С‚СЊ С‡РёСЃР»Р° РїРѕРєР° РЅРµ РЅР°Р№РґРµРј РїСЂРѕСЃС‚РѕРµ
 		while (checkPrime(result) == false)
 		{
 			result = result + 1;
@@ -41,7 +41,7 @@ unsigned long long nPrime(unsigned int n)
 	return result;
 }
 
-// Нахождение ближайшего следующего простого числа к value.
+// РќР°С…РѕР¶РґРµРЅРёРµ Р±Р»РёР¶Р°Р№С€РµРіРѕ СЃР»РµРґСѓСЋС‰РµРіРѕ РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р° Рє value.
 unsigned long long nextPrime(unsigned long long value)
 {
 	unsigned long long result;
@@ -49,7 +49,7 @@ unsigned long long nextPrime(unsigned long long value)
 		result = 2;
 	else
 		result = value + 1;
-	// Находим ближайшее большее число
+	// РќР°С…РѕРґРёРј Р±Р»РёР¶Р°Р№С€РµРµ Р±РѕР»СЊС€РµРµ С‡РёСЃР»Рѕ
 	while (checkPrime(result) == false)
 	{
 		result = result + 1;
