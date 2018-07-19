@@ -53,7 +53,7 @@ int main()
 		{
 			delete result[i];
 		}
-		//delete result;
+		delete result;
 	}
 
 	return 0;
