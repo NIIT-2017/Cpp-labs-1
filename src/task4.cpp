@@ -1,16 +1,18 @@
-static bool isDigit(char c)
+#include <cctype>
+
+/*static bool isDigit(char c)
 {
 	if (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9')
 		return true;
 	else
 		return false;
-}
+}*/
 
 static bool isNumber(char* value)
 {
 	while (*value != '\0')
 	{
-		if (isDigit(*value))
+		if (std::isdigit(*value))
 			value++;
 		else
 			return false;
@@ -46,7 +48,7 @@ static char* big_plus(char *x, char *y)
 		for (int i = 0; i < len_x; i++)
 		{
 			if (i < len_y)
-				result[len_x - 1 - i] = x[len_x - 1 - i] + y[len_y - 1 - i] - 48;
+				result[len_x - 1 - i] = x[len_x - 1 - i] + y[len_y - 1 - i] - '0';
 			else
 				result[len_x - 1 - i] = x[len_x - 1 - i];
 			if (plus_one_flag)
