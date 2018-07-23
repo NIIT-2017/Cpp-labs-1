@@ -1,5 +1,6 @@
 #include <cstring>
 #include <iostream>
+#include "task4.h"
 using namespace std;
 
 static void reverse(char *s)

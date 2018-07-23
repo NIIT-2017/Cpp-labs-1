@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-
+#include "task5.h"
 using namespace std;
 void split(char ***result, int *N, char *buf, char ch)
 {
