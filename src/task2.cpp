@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmaths>
+#include <cmath>
 #include "task2.h"
 using namespace std;
 
