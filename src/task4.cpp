@@ -74,7 +74,7 @@ char *sum(char *x, char *y)
 	if (z[0] == '0')
 		{
 		for (unsigned long long int i = 0; i < len; i++)
-			+ z[i] = z[i + 1];
+			z[i] = z[i + 1];
 		}
 	delete[] rx;
 	delete[] ry;
