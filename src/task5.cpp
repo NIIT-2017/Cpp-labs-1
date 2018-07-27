@@ -49,6 +49,6 @@ using namespace std;
 		numRes++;
 	}
 	*result = str;
-	delete[] newBuf;
-	delete[] str;
+	
+	
 }

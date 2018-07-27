@@ -7,15 +7,15 @@ using namespace std;
 int main()
 {
 	char *buf = (char*) "2345678---34567--456--";
-	char ***result = new char **;
-	int *N = new int;
+	char **result;
+	int N;
 	char ch = '-';
-	split(result, N, buf, ch);
-	for (int i = 0; i < *N; i++)
+	split(&result, &N, buf, ch);
+	for (int i = 0; i < N; i++)
 	{
 		cout << result[i] << endl;
 	}
-	for (int i = 0; i < *N; i++)
+	for (int i = 0; i < N; i++)
 		delete[]result[i];
 	delete[] * result;
 	return 0;
