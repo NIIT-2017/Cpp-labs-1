@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <stdio.h>
 #define _CTR_SECURE_NO_WARNINGS
 void transfer(int length, int *intarr, char *x);

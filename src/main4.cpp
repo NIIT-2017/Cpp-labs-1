@@ -1,6 +1,7 @@
 #include "task4.h"
 #include <string>
 #include <iostream>
+#include <cstring>
 #include <stdio.h>
 using namespace std;
 int main()
