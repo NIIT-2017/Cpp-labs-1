@@ -1,7 +1,8 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
-typedef unsigned long ULL;
+#include <stdlib.h>
 #define SIZE 20
+typedef unsigned long ULL;
 
 char * sum(char *x, char *y) {
 	ULL numX = 0;
