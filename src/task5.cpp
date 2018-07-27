@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "task5.h"
+#include <cstring>
 #define SIZE 20
 
 
