@@ -6,6 +6,7 @@ void split(char ***result, int *N, char *buf, char ch)
 {
 	int sizeBuf = strlen(buf);
 	char * lineup = new char[sizeBuf + 1];
+	lineup[sizeBuf] = '\0';
 	for (int i = 0; i < sizeBuf; i++)
 		lineup[i] = buf[i];
 	int count = 1;
@@ -25,12 +26,13 @@ void split(char ***result, int *N, char *buf, char ch)
 			counter++;
 			if (lineout[row][column] == ch)
 			{
-				lineout[row][column] = ' ';
+				lineout[row][column] = '\0';
 				break;
 			}
-		//	cout << lineout[row][column];
+				cout << lineout[row][column];
 		}
-	//	cout << endl;
+
+			cout << endl;
 	}
 	*N = count;
 	*result = lineout;
