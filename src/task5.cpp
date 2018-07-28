@@ -17,13 +17,16 @@ void split(char ***result, int *N, char *buf, char ch)
 	for (int lineNumber = 0; lineNumber < count; lineNumber++)
 		lineout[lineNumber] = new char[sizeBuf];
 	int x = -1;
+	int b;
 	int &counter = x;
 	for (int row = 0; row < count; row++)
 	{
+		b = 0;
 		for (int column = 0; column < sizeBuf; column++, sizeBuf--)
 		{
 			lineout[row][column] = lineup[counter + 1];
 			counter++;
+			b++;
 			if (lineout[row][column] == ch)
 			{
 				lineout[row][column] = '\0';
@@ -34,6 +37,7 @@ void split(char ***result, int *N, char *buf, char ch)
 
 			cout << endl;
 	}
+	lineout[count-1][b] = '\0';
 	*N = count;
 	*result = lineout;
 	delete[] lineup;
