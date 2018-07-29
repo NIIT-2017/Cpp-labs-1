@@ -7,8 +7,10 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	char * v1 = new char[30] {"123456789"};
-	char * v2 = new char[30] {"000000001"};
+	char * v1 = new char[30] {0};
+	char * v2 = new char[30] {0};
+	cin.getline(v1, 30);
+	cin.getline(v2, 30);
 	char * resultt = sum(v1, v2);
 	cout << resultt << " resultt"<< endl; 
 	cout << strlen(resultt) <<" Длина resultt"<< endl;
@@ -16,8 +18,10 @@ int main()
 	delete[] v2;
 	if (resultt != 0)
 		delete[] resultt;
-	char *v3 = new char[21]{ "99999999999999999999" };
-	char *v4 = new char[2]{ "1" };
+	char *v3 = new char[30]{ 0 };
+	char *v4 = new char[30]{ 0 };
+	cin.getline(v3, 30);
+	cin.getline(v4, 30);
 	char * resultt2 = sum(v3, v4);
 	cout << resultt2 <<" resultt2 "<< endl;
 	cout << strlen(resultt2) <<" strlen"<< endl;
