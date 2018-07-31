@@ -1,10 +1,4 @@
-bool checkPrime(unsigned int value) // проверка числа на простоту.
-{
-	bool res{ true };
-	for (unsigned int i = value - 1; i > 1; i--)
-		if (value %i == 0) res = false;
-	return res;
-}
+#include "task2.h"
 
 unsigned long long sumPrime(unsigned int hbound) // сумма всех чисел до hbound(не включая его)
 {
