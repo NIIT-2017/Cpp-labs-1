@@ -19,9 +19,9 @@ unsigned long long nPrime(unsigned n) // нахождение n - ого простого числа(в ряд
 }
 unsigned long long nextPrime(unsigned long long value) // нахождение ближайшего следующего простого числа к value.
 {
-	unsigned long long n=value +1;
-	if (checkPrime(n) == true)
-		return n;
+
+	if (checkPrime(value+1) == true)
+		return value+1;
 	else
-		nextPrime(n);
+		nextPrime(value+1);
 }
