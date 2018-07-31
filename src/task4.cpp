@@ -12,7 +12,7 @@ char *sum(char *x, char *y) // сумма чисел x и y
 		else
 			size++;
 	}
-	int size_x = size - 1;
+	int size_x = size-1;
 	
 	size = 0;
 	j = false;
@@ -28,9 +28,9 @@ char *sum(char *x, char *y) // сумма чисел x и y
 	int t{ 0 };
 	int a, b, summ;
 	if (size_x > size_y)
-		size = size_x;
+		size = size_x+1;
 	else
-		size = size_y;
+		size = size_y+1;
 	char *p_summ = new char[size+2];
 	p_summ[size+1] = 0;
 	for (int i = size; i >= 0; i--)
@@ -46,6 +46,11 @@ char *sum(char *x, char *y) // сумма чисел x и y
 		size_y--;
 	}
 	
+	if (p_summ[0] == '0')
+	{
+		for (int i = 0; i <= size + 2; i++)
+			p_summ[i] = p_summ[i + 1];
+	}
 
 	return p_summ;	
 	delete[] p_summ;
