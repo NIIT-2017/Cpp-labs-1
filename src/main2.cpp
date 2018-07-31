@@ -6,7 +6,7 @@ int main()
 {
 	int x;
 	cin >> x;
-	if (checkPrime(x) == 0)
+	if (checkPrime(x) == true)
 		cout << "ne Prostoe chislo"<< endl;
 	else cout << "Prostoe chislo"<<endl;
 	cout << x << " prostoe chislo " << nPrime(x) << endl;
