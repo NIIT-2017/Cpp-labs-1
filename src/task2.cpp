@@ -1,9 +1,9 @@
 bool checkPrime(unsigned int value) // проверка числа на простоту.
 {
-	bool res{ true};
-	for (unsigned int i = value - 1; i > 1; i--)
-		if (value %i == 0) res=false;
-	return res;
+//	bool res{ true};
+	for (unsigned int i = 2; i < value; i++)
+		if (value %i == 0) return false;
+	return true;
 }
 
 unsigned long long nPrime(unsigned n) // нахождение n - ого простого числа(в ряду).
@@ -19,9 +19,9 @@ unsigned long long nPrime(unsigned n) // нахождение n - ого простого числа(в ряд
 }
 unsigned long long nextPrime(unsigned long long value) // нахождение ближайшего следующего простого числа к value.
 {
-
-	if (checkPrime(value+1) == true)
-		return value+1;
+	unsigned long long n=value +1;
+	if (checkPrime(n) == true)
+		return n;
 	else
-		nextPrime(value+1);
+		nextPrime(n);
 }
