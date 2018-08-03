@@ -22,5 +22,5 @@ unsigned long long nextPrime(unsigned long long value) // нахождение ближайшего 
 	if (checkPrime(n) == true)
 		return n;
 	else
-		nextPrime(n);
+		return nextPrime(n);
 }
