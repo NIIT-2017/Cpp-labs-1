@@ -46,12 +46,12 @@ char *sum(char *x, char *y) // сумма чисел x и y
 		size_y--;
 	}
 	
-	if (p_summ[0] == '0')
+	if (p_summ[0] != '1')
 	{
 		for (int i = 0; i <= size + 2; i++)
 			p_summ[i] = p_summ[i + 1];
 	}
-
+	
 	return p_summ;	
 	delete[] p_summ;
 
