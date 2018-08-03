@@ -1,3 +1,5 @@
+#include <string>
+
 char *sum(char *x, char *y) // сумма чисел x и y
 {
 	
@@ -37,8 +39,10 @@ char *sum(char *x, char *y) // сумма чисел x и y
 	{
 		a = x[size_x] - 48;
 		if (a == -100) a = 0;
+		if (size_x < 0) a = 0;
 		b = y[size_y] - 48;
 		if (b == -100) b = 0;
+		if (size_y < 0)b = 0;
 		summ = a + b + t;
 		p_summ[i] = summ % 10 + 48;
 		t = summ / 10;
