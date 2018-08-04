@@ -1,6 +1,6 @@
 bool checkPrime(unsigned int value) // проверка числа на простоту.
 {
-	for (unsigned int i = 2; i < value; i++)
+	for (unsigned int i = 2; i*i < value; i++)
 		if (value %i == 0) return false;
 	return true;
 }
