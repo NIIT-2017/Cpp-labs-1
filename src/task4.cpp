@@ -10,15 +10,32 @@ char * sum(char *x, char *y) {
 	UL numY = 0;
 	UL sumAll = 0;
 	char *all;
+	while (*x) {
+		numX = numX * 10 + (*x++ - '0');
+	}
+	while (*y) {
+		numY = numY * 10 + (*y++ - '0');
+	}
 	
-	numX = strtol(x, NULL, 10);
-	numY = strtol(y, NULL, 10);
+//	numX = strtol(x, NULL, 10);
+//	numY = strtol(y, NULL, 10);
 	sumAll = numX + numY;
 	
 	char* arr = new char[SIZE];
 	
-	char *newStr = ltoa(sumAll, arr, 10);
-	
-	
-	return arr;
+	int i = 0;
+	while (sumAll) {
+		arr[i] = (sumAll % 10) + '0';
+		sumAll = sumAll / 10;
+		i++;
+	}
+	int len = 0;
+	len = i;
+	char *newStr=new char[len];
+	newStr[len]='\0';
+	for (int j = 0; j < len; j++) {
+		newStr[j] = arr[len-1-j];
+	}
+
+		return newStr;
 }
