@@ -2,7 +2,12 @@
 #include "task5.h"
 #include <cstring>
 #define SIZE 20
-
+void freeMemory(char** str,int size) {
+	for (int x = 0; x <size; x++) {
+		delete[] str[x];
+	}
+	delete[]str;
+}
 
 void split(char ***result, int *N, char *buf, char ch) {
 	// N - возвращаем, в нем - кол-во подстрок(лексем)
@@ -28,19 +33,29 @@ void split(char ***result, int *N, char *buf, char ch) {
 	//str указатель на массив со сторокой
 	
 	char **strarr= new char*[M];
-	strarr[0] = new char[M*SIZE];
-	
-	for (int i = 0; i < M; i++) {
-		strarr[i] = strarr[i] + SIZE;
-		strarr[i] = strPtr[i];
+	for (int j = 0; j < M; j++) {
+		strarr[j] = new char[SIZE];
+	}
+	//strarr[0] = new char[M*SIZE];
+	for (int n = 0; n < M;n++) {
+		//for (int j = 0; j < SIZE; j++) {
+			strarr[n] = strPtr[n];
+
+		//}
 	}
 	
-	 
 	
-	**result = *strarr;//вернуть массив
+	M = *N ;
+	//*result = strPtr;
+	//result = &strarr;//вернуть массив
+	for (int m = 0; m < M; m++) {
+		result[m] = &strarr[m];
+		cout<<*result[m] << endl;
+	}
 
+	
+	freeMemory(strarr, M);
 
-	delete[]strarr;
 	
 }
 
