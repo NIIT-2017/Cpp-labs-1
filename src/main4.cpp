@@ -5,8 +5,8 @@ using namespace std;
 
 int main()
 {
-	char *x = "2018";
-	char *y = "109";
+	char *x = "1025";
+	char *y = "573";
 
 	char *result = sum(x, y);
 

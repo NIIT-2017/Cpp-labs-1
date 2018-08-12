@@ -1,6 +1,8 @@
 #include "task5.h"
 #include <iostream>
 #include <cstdlib>
+#include <cstring>
+
 using namespace std;
 
 
@@ -14,7 +16,6 @@ void split(char ***result, int *N, char *buf, char ch)
 		if (buf[t] == ch) k++;
 	}
 
-	cout << ch << endl;
 
 	char **arr = new char*[k];
 	*N = k;

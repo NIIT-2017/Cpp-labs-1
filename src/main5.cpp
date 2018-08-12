@@ -11,7 +11,7 @@ int main()
 	int N = 0;
 	char buf[200];
 	cin >> buf;
-	split(&result, &N, buf, '.');
+	split(&result, &N, buf, ',');
 	for (int i = 0; i < N; i++)
 	{
 		cout << result[i] << endl;
