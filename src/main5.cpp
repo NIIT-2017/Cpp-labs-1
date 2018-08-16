@@ -3,10 +3,10 @@
 #include "task5.h"
 
 int main() {
-	char arr1;
+	/*char arr1;
 	char* arr2 = {&arr1};
 	char** data = { &arr2 };
-
+*/
 	//int count = 0;
 	int N = 0;
 	 char buf[] = "This string must be broke by lexems.";

@@ -12,7 +12,6 @@ void freeMemory(char** str,int size) {
 void split(char ***result, int *N, char *buf, char ch) {
 	// N - возвращаем, в нем - кол-во подстрок(лексем)
 	
-	//ch = *(" ");
 	
 	char *strPtr[SIZE];// массив указателей на лексемы
 	int i = 0;
@@ -29,32 +28,12 @@ void split(char ***result, int *N, char *buf, char ch) {
 
 	M = i - 1;
 	*N = M;
-	
-	//str указатель на массив со сторокой
-	
-	char **strarr= new char*[M];
 	for (int j = 0; j < M; j++) {
-		strarr[j] = new char[SIZE];
-	}
-	//strarr[0] = new char[M*SIZE];
-	for (int n = 0; n < M;n++) {
-		//for (int j = 0; j < SIZE; j++) {
-			strarr[n] = strPtr[n];
-
-		//}
+		cout << strPtr[j] << endl;
 	}
 	
+	*result = strPtr;
 	
-	M = *N ;
-	//*result = strPtr;
-	//result = &strarr;//вернуть массив
-	for (int m = 0; m < M; m++) {
-		result[m] = &strarr[m];
-		cout<<*result[m] << endl;
-	}
-
-	
-	freeMemory(strarr, M);
 
 	
 }
