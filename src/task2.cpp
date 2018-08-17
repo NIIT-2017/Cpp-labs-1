@@ -1,8 +1,10 @@
 bool checkPrime(unsigned int value) // проверка числа на простоту.
 {
-	for (unsigned int i = 2; i*i < value; i++)
-		if (value %i == 0) return false;
-	return true;
+
+		for (unsigned int i = 2; i*(i-1) < value; i++)
+			if (value %i == 0) return false;
+		return true;
+
 }
 
 unsigned long long nPrime(unsigned n) // нахождение n - ого простого числа(в ряду).
