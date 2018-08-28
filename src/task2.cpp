@@ -1,7 +1,8 @@
+#include <math.h>
 bool checkPrime(unsigned int value)
 {
 	if (value < 2) return false;
-	for (int i = value / 2; i > 1; i--)
+	for (unsigned int i = 2; i <= sqrt(double(value)); i++)
 	{
 		if (value%i == 0) return false;
 	}
