@@ -11,9 +11,8 @@ using namespace std;
 
 void split(char ***result, int *N, char *buf, char ch) {
 	string str = buf;
-	int c = std::count(str.begin(), str.end(), ch);
-	*N = c + 1;
-	*result = new char*[*N];
+	 
+	 
 
 	vector<char*> tokens;
 	string::size_type lastPos = str.find_first_not_of(ch, 0);
@@ -27,6 +26,8 @@ void split(char ***result, int *N, char *buf, char ch) {
 		pos = str.find_first_of(ch, lastPos);
 
 	}
+	*N = tokens.size();
+	*result = new char*[*N];
 	for (int i = 0; i < *N; i++) {
 		 
 		(*result)[i] = tokens[i];
