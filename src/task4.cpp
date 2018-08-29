@@ -7,9 +7,13 @@ using namespace std;
 char * sum(char *x, char *y) {
 
 	string sum = "";
-	int size1 = _msize(x) / sizeof(x[0]);
-	int size2 = _msize(y) / sizeof(y[0]);
-
+	int i, j;
+	for (i = 0; x[i] != '\0'; ++i);
+	 
+	int size1 = i + 1;
+	for (j = 0; y[j] != '\0'; ++j);
+	int size2 = j+1;
+	
 	if (size1>size2)
 	{
 		int difference = size1 - size2;
