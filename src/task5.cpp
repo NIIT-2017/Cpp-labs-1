@@ -11,7 +11,7 @@ using namespace std;
 
 void split(char ***result, int *N, char *buf, char ch) {
 	string str = buf;
-	int c = count(str.begin(), str.end(), ch);
+	int c = std::count(str.begin(), str.end(), ch);
 	*N = c + 1;
 	*result = new char*[*N];
 
