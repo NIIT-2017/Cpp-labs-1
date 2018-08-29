@@ -5,8 +5,8 @@ using namespace std;
 
 
 int main()
-{
-	char *buf = new char[12]{ "123,456,789" };
+{char *buf="123,456,789";
+	 
 	int N = 0;
 	char **result = nullptr;
 	char ch = ',';
