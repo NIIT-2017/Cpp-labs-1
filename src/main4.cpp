@@ -3,10 +3,11 @@
 
 int main()
 {
-	char *x = (char*)"9876543219876543210";
-	char *y = (char*)"321";
+	char *x = (char*)"123456789";
+	char *y = (char*)"1";
 
-std::cout<<sum(x, y);
+	char *result = sum(x, y);
+	std::cout<<result<<std::endl;
 	
 	return 0;
 }
