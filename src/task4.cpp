@@ -1,52 +1,94 @@
- 
- 
-#include <string> 
-using namespace std;
+#include "task4.h"
+char * sum(char *x, char *y)
+{
+    int length;
+    int i = 0;
+    while (x[i] != '\0') i++;
+    int j = 0;
+    while (y[j] != '\0') j++;
+    int c = 0;
+    int length1, length2;
 
-char * sum(char *x, char *y) {
-
-	string sum = "";
-	int size1 = _msize(x) / sizeof(x[0]);
-	int size2 = _msize(y) / sizeof(y[0]);
-
-	if (size1>size2)
-	{
-		int difference = size1 - size2;
-		for (int n = 0; n<difference; n++)
-			sum += '0';
-		 
-		sum += y;
-		strcpy(y, sum.c_str());
-		 
-	}
-	if (size1<size2)
-	{
-		int difference = size2 - size1;
-		for (int n = 0; n<difference; n++)
-			sum += '0';
-		 
-		sum += x;
-		strcpy(x, sum.c_str());
-		 
-	}
-	if (size1 == size2)
-		sum = x;
-
-	int reminder = 0, dividend = 0, localSum = 0;
-
-	for (int n = sum.size() - 1; n >= 0; n--)
-	{
-		localSum = dividend + (y[n] - '0') + (x[n] - '0');
-		reminder = localSum % 10;
-		dividend = localSum / 10;
-		sum[n] = reminder + '0';
-		if (n == 0 && dividend >= 1) {
-			sum.insert(sum.begin(), div(localSum, 10).quot + '0');
-		}
-	}
-
-	char* result = new char[sum.size()];
-	strcpy(result, sum.c_str());
-
-	return result;
+    if (i >= j) {
+        length = i + 1;
+    }
+    else {
+        length = j + 1;
+    }
+    length1 = i;
+    length2 = j;
+    int t;
+    char *z = new char[length+1]();
+    int k = length;
+    int a;
+    int b;
+    int d = 0;
+    z[length+1]='\0';
+    while ((i != 0) && (j != 0))
+    {
+        a = x[i - 1] - '0';
+        b = y[j - 1] - '0';
+        t = a + b + c;
+        d = t % 10;
+        z[k] = d + '0';
+        if (t > 9) c = 1;
+        else c = 0;
+        //std::cout << z[k];
+        k--;
+        i--;
+        j--;
+    }
+    if (length1 > length2)
+    {
+        while (k > 0) {
+            if (i) {
+                a = x[i - 1] - '0';
+            }
+            else a = 0;
+            t = a + c;
+            d = t % 10;
+            z[k] = d + '0';
+            if (t > 9) c = 1;
+            else c = 0;
+           //std::cout << z[k];
+            k--;
+            i--;
+        }
+    }
+    else {
+        while (k > 0) {
+            if (j) {
+                a = y[j - 1] - '0';
+            }
+            else a = 0;
+            t = a + c;
+            d = t % 10;
+            z[k] = d + '0';
+            if (t > 9) c = 1;
+            else c = 0;
+            //std::cout << z[k];
+            k--;
+            j--;
+        }
+    }
+    if (z[1]== '0') {
+        char *z2 = new char[length]();
+        for (i=0;i<length-1;i++){
+            z2[i] =z[i+2] ;
+            //std::cout << z2[i];
+        }
+        z2[length]='\0';
+        delete[] z;
+        return z2;
+    }
+    else {
+        char *z3 = new char[length+1]();
+        for (i=0;i<length;i++){
+            z3[i] =z[i+1] ;
+            //std::cout << z3[i];
+        }
+        z3[length+1]='\0';
+        delete[] z;
+        return z3;
+    }
 }
